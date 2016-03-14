@@ -4,7 +4,7 @@ module RailsEngineDecorators
 
     included do
       initializer 'rails_engine_decorators.load' do
-        decorators = paths['app/decorators'].existent
+        decorators = paths['app/decorators'].expanded
 
         if decorators.any?
           config.to_prepare do
